@@ -1,0 +1,22 @@
+{
+  "name": "atlas-typescript-quickstart",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "TypeScript (no framework) + Vite sign-in built on the @atlasauth/js FapiClient.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@atlasauth/js": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
+  }
+}

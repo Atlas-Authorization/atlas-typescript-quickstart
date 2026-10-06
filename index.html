@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas TypeScript quickstart</title>
+    <style>
+      body { max-width: 440px; margin: 3rem auto; font-family: system-ui, sans-serif; }
+      input, button { display: block; width: 100%; margin: 0.4rem 0; padding: 0.6rem; box-sizing: border-box; }
+      .row { display: flex; gap: 0.5rem; }
+      .row button { margin: 0; }
+      pre { background: #f4f4f5; padding: 1rem; border-radius: 8px; overflow: auto; }
+      .hidden { display: none; }
+    </style>
+  </head>
+  <body>
+    <h1>Atlas — TypeScript</h1>
+
+    <section id="signed-out">
+      <p>Sign in with email + password.</p>
+      <input id="identifier" type="email" placeholder="you@example.com" autocomplete="username" />
+      <input id="password" type="password" placeholder="password" autocomplete="current-password" />
+      <input id="code" type="text" placeholder="MFA / email code (if prompted)" />
+      <button id="signin">Sign in</button>
+      <p>Or use a social provider:</p>
+      <button id="google">Continue with Google</button>
+    </section>
+
+    <section id="signed-in" class="hidden">
+      <p id="who"></p>
+      <button id="signout">Sign out</button>
+    </section>
+
+    <h2>Session</h2>
+    <pre id="out">…</pre>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
