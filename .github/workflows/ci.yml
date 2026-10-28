@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Placeholder environment
+        run: '[ -f .env.example ] && cp .env.example .env || true'
+      - run: npm install
+      - run: npm run typecheck --if-present
+      - run: npm run check --if-present
+      - run: npm run build --if-present
+      - run: npm test --if-present
