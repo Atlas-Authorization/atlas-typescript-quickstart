@@ -13,7 +13,11 @@ jobs:
         with:
           node-version: 22
       - name: Placeholder environment
-        run: '[ -f .env.example ] && cp .env.example .env || true'
+        run: |
+          if [ -f .env.example ]; then
+            cp .env.example .env
+            grep -E '^[A-Z_]+=' .env.example >> "$GITHUB_ENV"
+          fi
       - run: npm install
       - run: npm run typecheck --if-present
       - run: npm run check --if-present
