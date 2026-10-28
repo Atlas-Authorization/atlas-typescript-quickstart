@@ -14,7 +14,7 @@
     "@atlasauth/js": "^0.26.1"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
+    "@types/node": "^26.6.5",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vite": "^5.4.11"
